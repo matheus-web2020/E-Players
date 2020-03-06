@@ -13,11 +13,16 @@
 <body>
 
     <header>
-        <div class="container" title="Acessar a página inicial do site">
-            <a href="index.html">
-                <img src= "img/Logo.svg" alt="Logo do site E-Players">
-            </a>
-            <nav>
+        <div class="container">
+            <div>
+                <a href="#" onclick="botaoMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <a href="index.html" title="Acessar a página inicial do site">
+                    <img src="img/Logo.svg" alt="Logo do site E-Players">
+                </a>
+            </div>
+            <nav id="menu">
                 <ul>
                     <li><a href="index.html" title="Acessar página inicial">Início</a></li>
                     <li><a href="#sobre" title="Acessar sessão sobre o projeto">Sobre</a></li>
@@ -98,7 +103,7 @@
                 </div>
 
             </div>
-        </section>  
+        </section>
         <div class="container">
             <div class="banner">
                 <img src="img/play.png" alt="Rodar Vídeo descritivo">
@@ -142,7 +147,7 @@
                             accusamus deserunt temporibus repudiandae quibusdam unde earum modi aspernatur ex doloribus
                             voluptatum
                             quia consequatur quasi cupiditate recusandae.</p>
-                      
+
                     </div>
                     <!--Fim texto sobre-->
                 </div>
@@ -284,11 +289,11 @@
             <div>
                 <img src="img/Logo.svg" alt="Logo do Projeto E-Players">
                 <div class="sociais">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
-            </div>  
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
             </div>
             <form action="" method="get">
                 <label for="email">Entre Para a Lista VIP</label>
@@ -301,8 +306,17 @@
         <!--Fim container-->
         <p>® COPYRIGHT - Todos os direitos reservados - SENAI de Informática</p>
 
-
     </footer>
+    <script>
+        function botaoMenu() {
+            var m = document.getElementById("menu");
+            if (m.style.display == "block") {
+                m.style.display = "none"
+            } else {
+                m.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 
