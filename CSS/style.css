@@ -74,16 +74,21 @@ header img{
 }
 .partidas .container{
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: wrap;
+}
+.proximas_partidas{
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex-flow: wrap;
 }
 .partida{
     padding: 0 0 10px 0;
 }
 .partida img{
     width: 40px;
-    padding: 0 10px;
+    padding: 0 10px; 
 }
 .partida h2{
     font-size: 14px;
@@ -188,7 +193,7 @@ header img{
     display: flex;
     justify-content: flex-start;
     background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(30,28,33,1) 30%, rgba(30,28,33,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(30,28,33,1) 30%, rgba(30,28,33,1) 100%);
 }
 .card img{
     width: 220px;
@@ -231,7 +236,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(30,28,33,1) 30%, rgba(3
 }
 
 .resultado img{
-    width: 60px;
+    width: 45px;
 }
 .resultado p{
     font-size: 1.7em;
@@ -298,7 +303,7 @@ footer form input{
     margin-right: -5px;
     padding: 1px;
 }
-.btn{
+ .btn{
     text-decoration: none;
     color: white;
     border: none;
@@ -374,6 +379,57 @@ select{
     margin-right: 0.5em;
 }
 .form_cadastro .campo:nth-last-child(n) button{
-    margin: auto
-    ;
+    margin: auto;
 }
+
+/* Início responsividade */
+/* 800px */
+@media(max-width: 800px){
+
+     .container{
+         width: 95%;
+     }
+     header .container img{
+         max-width: 180px;
+     }
+     .partidas .container{
+         flex-flow: nowrap;
+        
+     }
+     .em_andamento{
+         width: 30%;
+        
+     }
+     .proximas_partidas{
+         width: 70%;
+         flex-flow: wrap;
+     }
+     .ligas h4{
+         font-size: 30px;
+     }
+     .ligas h3{
+         font-size: 60px;
+     }
+     .ligas img{
+         height: 90px;
+     }
+     .sobre img{
+         max-width: 45%;
+         left: 20px;
+     }
+
+     .texto_sobre{
+         width: 55%;
+         margin-right: 30px;
+     }
+     .content{
+         margin-top: 50px;
+     }
+     .card img{
+         margin-top: 2.5em;
+         margin-left: 1em;
+     }
+     .resultado p{
+         margin-top: 0.5em;
+     }
+} /*Fim Media Query 800px*/
